@@ -43,8 +43,7 @@ class Tags extends React.Component {
     } else if (
       text.length > 1 &&
       this.props.createTagOnString.includes(text.slice(-1)) &&
-      !text.match(new RegExp(`^[${this.props.createTagOnString.join("")}]+$`, 'g')) &&
-      !(this.state.tags.indexOf(text.slice(0, -1).trim()) > -1)
+      !text.match(new RegExp(`^[${this.props.createTagOnString.join("")}]+$`, 'g'))      
     ) {
       this.addTag(text.slice(0, -1));
     } else {
