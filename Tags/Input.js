@@ -18,6 +18,7 @@ const Input = (props) => {
     <View style={[styles.textInputContainer, inputContainerStyle]}>
       <TextInput
         {...textInputProps}
+        contextMenuHidden={true}
         style={[styles.textInput, inputStyle]}
         value={value}
         onChangeText={onChangeText}
